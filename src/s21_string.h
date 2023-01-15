@@ -1,3 +1,4 @@
+// Copyright 2022 joaquind, stonehome, bernardi, hazzeasu, killeral
 #ifndef SRC_S21_STRING_H_
 #define SRC_S21_STRING_H_
 
