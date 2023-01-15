@@ -51,11 +51,6 @@ valgrind: clean
 	gcc -g ${TESTS_SOURCE} s21_string.a -o test -lcheck -lcheck -lpthread -lm -D_GNU_SOURCE -lrt -lsubunit
 	CK_FORK=no valgrind --trace-children=yes --track-fds=yes --track-origins=yes --leak-check=full --show-leak-kinds=all --verbose --log-file=RESULT_VALGRIND.txt ./test
 
-style: clean
-	cp ../materials/linters/.clang-format ../src/.clang-format
-	clang-format -style=Google -n *.c *.h
-	rm .clang-format
-
 clean:
 	-rm -rf *.o && rm -rf *.gcno
 	-rm -rf *.a && rm -rf *.gcda
